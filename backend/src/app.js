@@ -9,6 +9,6 @@ const blogsRouter = require('./blogs/blogs.router');
 app.use(express.json());
 app.use(cors());
 
-app.use("/", blogsRouter);
+app.use("/blogs", blogsRouter);
 
 module.exports = app;

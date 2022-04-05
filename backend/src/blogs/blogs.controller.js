@@ -1,7 +1,7 @@
 const path = require('path');
 
 // Use our blogs data
-const blogs = require(path.resolve('src/data/data-blogs'));
+const blogs = require(path.resolve('src/data/blogs-data'));
 
 // Middleware
 function list(req, res) {
