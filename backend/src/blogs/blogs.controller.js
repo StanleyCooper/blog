@@ -1,11 +1,8 @@
-const path = require('path');
+const blogsService = require("./blogs.service");
 
-// Use our blogs data
-const blogs = require(path.resolve('src/data/blogs-data'));
-
-// Middleware
-function list(req, res) {
-    res.json({ data: blogs });
+async function list(req, res, next) {
+    const data = await blogsService.list();
+    return res.json({ data });
 }
 
 module.exports = {
